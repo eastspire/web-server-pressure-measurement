@@ -46,8 +46,7 @@ fn find_http_end(request: &[u8]) -> Option<usize> {
 
 #[tokio::main]
 async fn main() -> io::Result<()> {
-    let listener: TcpListener = TcpListener::bind("0.0.0.0:10000").await?;
-    println!("Server is listening on port 10000");
+    let listener: TcpListener = TcpListener::bind("0.0.0.0:60000").await?;
     loop {
         match listener.accept().await {
             Ok((stream, _)) => {

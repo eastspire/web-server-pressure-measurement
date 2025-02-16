@@ -14,7 +14,7 @@ fn rocket() -> _ {
         .mount("/", routes![index])
         .configure(rocket::Config {
             log_level: rocket::config::LogLevel::Off,
-            port: 8000,
+            port: 60000,
             keep_alive: 0,
             ..Default::default()
         })
