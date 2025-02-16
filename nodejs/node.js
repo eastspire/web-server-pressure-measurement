@@ -13,6 +13,4 @@ const server = http.createServer(requestHandler);
 server.keepAliveTimeout = 0;
 server.headersTimeout = 65000;
 
-server.listen(8000, '0.0.0.0', () => {
-  console.log('Server is running on http://localhost:8000');
-});
+server.listen(60000, '0.0.0.0', () => {});
