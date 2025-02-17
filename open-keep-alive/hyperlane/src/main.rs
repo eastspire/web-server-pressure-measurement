@@ -1,11 +1,11 @@
 use hyperlane::*;
 
 fn test_sync_middleware(arc_lock_controller_data: ArcRwLockControllerData) {
-    let controller_data: ControllerData = get_controller_data(&arc_lock_controller_data);       
+    let controller_data: ControllerData = get_controller_data(&arc_lock_controller_data);
     let mut response: Response = controller_data.get_response().clone();
     let body: &str = "hello";
     let stream: ArcTcpStream = controller_data.get_stream().clone().unwrap();
-    let res: ResponseResult = response
+    let _: ResponseResult = response
         .set_body(body)
         .set_status_code(200)
         .set_header(CONNECTION, CONNECTION_KEEP_ALIVE)
