@@ -1,37 +1,31 @@
 use std::io::{self, Read, Write};
 use std::net::{TcpListener, TcpStream};
 
-static RESPONSE: &[u8] = &[
-    72, 84, 84, 80, 47, 49, 46, 49, 32, 50, 48, 48, 32, 79, 75, 13, 10, 67, 111, 110, 116, 101,
-    110, 116, 45, 84, 121, 112, 101, 58, 32, 116, 101, 120, 116, 47, 112, 108, 97, 105, 110, 13,
-    10, 67, 111, 110, 116, 101, 110, 116, 45, 76, 101, 110, 103, 116, 104, 58, 32, 53, 13, 10, 67,
-    111, 110, 110, 101, 99, 116, 105, 111, 110, 58, 32, 99, 108, 111, 115, 101, 13, 10, 13, 10,
-    104, 101, 108, 108, 111,
-];
+static RESPONSE: &[u8] = b"HTTP/1.1 200 OK\r\n\
+Content-Type: text/plain\r\n\
+Content-Length: 5\r\n\
+Connection: close\r\n\r\n\
+hello";
 
 fn handle_client(mut stream: TcpStream) {
     let mut buffer: [u8; 512] = [0; 512];
     let mut request: Vec<u8> = Vec::new();
-    loop {
-        let n = match stream.read(&mut buffer) {
-            Ok(0) => {
-                break;
-            }
-            Ok(n) => n,
-            Err(e) => {
-                eprintln!("Error reading from stream: {}", e);
-                break;
-            }
-        };
-        request.extend_from_slice(&buffer[..n]);
-        while let Some(pos) = find_http_end(&request) {
-            if let Err(e) = stream.write_all(RESPONSE) {
-                eprintln!("Error writing response to stream: {}", e);
-                break;
-            }
-            request.drain(..pos + 4);
+    let n = match stream.read(&mut buffer) {
+        Ok(0) => {
+            return;
         }
-        break;
+        Ok(n) => n,
+        Err(e) => {
+            eprintln!("Error reading from stream: {}", e);
+            return;
+        }
+    };
+    request.extend_from_slice(&buffer[..n]);
+    if let Some(pos) = find_http_end(&request) {
+        if let Err(e) = stream.write_all(RESPONSE) {
+            eprintln!("Error writing response to stream: {}", e);
+            return;
+        }
     }
 }
 
