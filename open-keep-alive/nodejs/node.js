@@ -3,7 +3,7 @@ const http = require('http');
 const requestHandler = (_req, res) => {
   res.writeHead(200, {
     'Content-Type': 'text/plain',
-    Connection: 'close',
+    Connection: 'keep-alive',
   });
   res.end('Hello, World!');
 };
