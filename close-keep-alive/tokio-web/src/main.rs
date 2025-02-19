@@ -24,7 +24,7 @@ async fn handle_client(mut stream: TcpStream) {
             }
         };
         request.extend_from_slice(&buffer[..n]);
-        if let Some(pos) = find_http_end(&request) {
+        while let Some(pos) = find_http_end(&request) {
             if let Err(e) = stream.write_all(RESPONSE).await {
                 eprintln!("Error writing response to stream: {}", e);
                 break;
