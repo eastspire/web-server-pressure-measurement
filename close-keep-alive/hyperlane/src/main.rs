@@ -1,7 +1,9 @@
 use hyperlane::*;
 
 async fn test_sync_middleware(arc_lock_controller_data: ArcRwLockControllerData) {
-    let _ = send_response(&arc_lock_controller_data, 200, "hello").await;
+    let _ = arc_lock_controller_data
+        .send_response_once(200, "hello")
+        .await;
 }
 
 async fn run_server() {
