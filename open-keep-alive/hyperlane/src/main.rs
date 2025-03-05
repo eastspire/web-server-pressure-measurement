@@ -1,18 +1,10 @@
 use hyperlane::*;
 
 async fn test_sync_middleware(controller_data: ControllerData) {
-    let controller_data: ControllerData = controller_data.get_controller_data().await;
-    let mut response: Response = controller_data.get_response().clone();
-    let body: &str = "hello";
-    let stream_opt: OptionArcRwLockStream = controller_data.get_stream().await;
-    if stream_opt.is_none() {
-        return;
-    }
-    let _: ResponseResult = response
-        .set_body(body)
-        .set_status_code(200)
-        .set_header(CONNECTION, CONNECTION_KEEP_ALIVE)
-        .send(&stream_opt.unwrap())
+    let _ = controller_data
+        .set_response_header(CONNECTION, CONNECTION_KEEP_ALIVE)
+        .await
+        .send_response(200, "hello")
         .await;
 }
 
