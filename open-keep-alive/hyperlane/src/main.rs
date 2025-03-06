@@ -14,7 +14,7 @@ async fn run_server() {
     server.port(60000).await;
     server.log_dir("./logs").await;
     server.log_interval_millis(1_000_000_000).await;
-    server.middleware(test_sync_middleware).await;
+    server.request_middleware(test_sync_middleware).await;
     server.listen().await;
 }
 
