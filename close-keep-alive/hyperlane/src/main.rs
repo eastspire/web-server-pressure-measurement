@@ -1,8 +1,7 @@
 use hyperlane::*;
 
 async fn test_sync_middleware(controller_data: ControllerData) {
-    let _ = controller_data.send_response_once(200, "hello").await;
-    controller_data.close().await;
+    let _ = controller_data.send_response(200, "hello").await;
 }
 
 async fn run_server() {
