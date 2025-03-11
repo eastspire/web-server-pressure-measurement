@@ -1,11 +1,9 @@
 #[macro_use]
 extern crate rocket;
 
-static RESPONSE: [u8; 13] = [72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33];
-
 #[get("/")]
-async fn index() -> &'static [u8] {
-    &RESPONSE
+async fn index() -> String {
+    "hello".to_string()
 }
 
 #[launch]
