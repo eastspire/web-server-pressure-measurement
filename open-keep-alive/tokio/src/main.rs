@@ -5,7 +5,7 @@ static RESPONSE: &[u8] = b"HTTP/1.1 200 OK\r\n\
 Content-Type: text/plain\r\n\
 Content-Length: 5\r\n\
 Connection: keep-alive\r\n\r\n\
-hello";
+Hello";
 
 async fn handle_client(mut stream: TcpStream) {
     let mut buffer: [u8; 512] = [0; 512];

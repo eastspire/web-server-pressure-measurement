@@ -20,7 +20,7 @@ impl Fairing for DisableKeepAlive {
 
 #[get("/")]
 async fn index() -> &'static str {
-    "hello"
+    "Hello"
 }
 
 #[launch]

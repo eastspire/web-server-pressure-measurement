@@ -3,7 +3,7 @@ extern crate rocket;
 
 #[get("/")]
 async fn index() -> String {
-    "hello".to_string()
+    "Hello".to_string()
 }
 
 #[launch]

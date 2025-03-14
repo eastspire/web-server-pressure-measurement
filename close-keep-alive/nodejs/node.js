@@ -5,7 +5,7 @@ const requestHandler = (_req, res) => {
     'Content-Type': 'text/plain',
     Connection: 'close',
   });
-  res.end('hello');
+  res.end('Hello');
 };
 
 const server = http.createServer(requestHandler);

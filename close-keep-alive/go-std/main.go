@@ -7,12 +7,11 @@ import (
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Connection", "close")
-	fmt.Fprintf(w, "hello")
+	fmt.Fprintf(w, "Hello")
 }
 
 func main() {
-	http.HandleFunc("/", helloHandler)
-	fmt.Println("Starting server at :60000...")
+	http.HandleFunc("/", helloHandler)	
 	if err := http.ListenAndServe(":60000", nil); err != nil {
 		fmt.Println("Error starting server:", err)
 	}
