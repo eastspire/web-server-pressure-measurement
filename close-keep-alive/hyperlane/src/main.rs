@@ -1,6 +1,6 @@
 use hyperlane::*;
 
-async fn test_sync_middleware(controller_data: ControllerData) {
+async fn request_middleware(controller_data: ControllerData) {
     let _ = controller_data
         .set_response_header(CONNECTION, CONNECTION_CLOSE)
         .await
@@ -20,6 +20,6 @@ async fn main() {
     server.http_line_buffer_size(512).await;
     server.websocket_buffer_size(512).await;
     server.log_interval_millis(1_000_000_000).await;
-    server.request_middleware(test_sync_middleware).await;
+    server.request_middleware(request_middleware).await;
     server.listen().await;
 }
