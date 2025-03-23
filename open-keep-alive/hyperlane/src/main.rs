@@ -8,11 +8,13 @@ async fn test_sync_middleware(controller_data: ControllerData) {
         .await;
 }
 
-async fn run_server() {
+#[tokio::main]
+async fn main() {
     let server: Server = Server::new();
     server.host("0.0.0.0").await;
     server.port(60000).await;
     server.log_dir("./logs").await;
+    server.disable_log().await;
     server.disable_inner_log().await;
     server.disable_inner_print().await;
     server.http_line_buffer_size(512).await;
@@ -20,9 +22,4 @@ async fn run_server() {
     server.log_interval_millis(1_000_000_000).await;
     server.request_middleware(test_sync_middleware).await;
     server.listen().await;
-}
-
-#[tokio::main]
-async fn main() {
-    run_server().await;
 }
