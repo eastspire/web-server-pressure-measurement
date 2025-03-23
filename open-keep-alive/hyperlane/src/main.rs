@@ -15,6 +15,8 @@ async fn run_server() {
     server.log_dir("./logs").await;
     server.disable_inner_log().await;
     server.disable_inner_print().await;
+    server.http_line_buffer_size(512).await;
+    server.websocket_buffer_size(512).await;
     server.log_interval_millis(1_000_000_000).await;
     server.request_middleware(test_sync_middleware).await;
     server.listen().await;
