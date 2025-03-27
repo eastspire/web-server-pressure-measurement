@@ -1,7 +1,7 @@
 use hyperlane::*;
 
-async fn request_middleware(controller_data: ControllerData) {
-    let _ = controller_data
+async fn request_middleware(ctx: Context) {
+    let _ = ctx
         .set_response_header(CONNECTION, CONNECTION_KEEP_ALIVE)
         .await
         .send_response(200, "Hello")
