@@ -13,6 +13,8 @@ async fn main() {
     let server: Server = Server::new();
     server.host("0.0.0.0").await;
     server.port(60000).await;
+    server.disable_linger().await;
+    server.disable_nodelay().await;
     server.log_dir("./logs").await;
     server.disable_log().await;
     server.disable_inner_log().await;
