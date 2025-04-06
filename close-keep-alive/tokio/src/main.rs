@@ -13,7 +13,7 @@ Hello";
 fn runtime() -> Runtime {
     Builder::new_multi_thread()
         .worker_threads(8)
-        .thread_stack_size(1024)
+        .thread_stack_size(2097152)
         .max_blocking_threads(5120)
         .max_io_events_per_tick(5120)
         .enable_all()
