@@ -34,7 +34,7 @@ async fn run() {
     server.http_line_buffer_size(512).await;
     server.websocket_buffer_size(512).await;
     server.request_middleware(request_middleware).await;
-    server.listen().await.unwrap();
+    server.run().await.unwrap();
 }
 
 fn main() {
