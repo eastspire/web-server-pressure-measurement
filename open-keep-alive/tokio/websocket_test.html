@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket广播测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #messageArea {
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        #messageInput {
+            width: 70%;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .status {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .received {
+            color: blue;
+        }
+        .sent {
+            color: green;
+        }
+        .system {
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket广播测试</h1>
+    <div class="status" id="status">状态: 未连接</div>
+    <div id="messageArea"></div>
+    <div>
+        <input type="text" id="messageInput" placeholder="输入消息...">
+        <button id="sendButton">发送</button>
+        <button id="connectButton">连接</button>
+        <button id="disconnectButton" disabled>断开</button>
+    </div>
+
+    <script>
+        const statusElement = document.getElementById('status');
+        const messageArea = document.getElementById('messageArea');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const connectButton = document.getElementById('connectButton');
+        const disconnectButton = document.getElementById('disconnectButton');
+        
+        let socket = null;
+
+        function addMessage(message, type) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add(type);
+            messageElement.textContent = message;
+            messageArea.appendChild(messageElement);
+            messageArea.scrollTop = messageArea.scrollHeight;
+        }
+
+        function connect() {
+            if (socket) {
+                addMessage('已经连接，请先断开', 'system');
+                return;
+            }
+
+            // 创建WebSocket连接
+            socket = new WebSocket('ws://localhost:60000');
+
+            socket.onopen = function() {
+                statusElement.textContent = '状态: 已连接';
+                addMessage('WebSocket连接已建立', 'system');
+                connectButton.disabled = true;
+                disconnectButton.disabled = false;
+                sendButton.disabled = false;
+            };
+
+            socket.onmessage = function(event) {
+                addMessage(`收到: ${event.data}`, 'received');
+            };
+
+            socket.onclose = function() {
+                statusElement.textContent = '状态: 已断开';
+                addMessage('WebSocket连接已关闭', 'system');
+                connectButton.disabled = false;
+                disconnectButton.disabled = true;
+                sendButton.disabled = true;
+                socket = null;
+            };
+
+            socket.onerror = function(error) {
+                statusElement.textContent = '状态: 错误';
+                addMessage(`错误: ${error}`, 'system');
+            };
+        }
+
+        function disconnect() {
+            if (socket) {
+                socket.close();
+                socket = null;
+            }
+        }
+
+        function sendMessage() {
+            if (!socket) {
+                addMessage('未连接，请先连接WebSocket', 'system');
+                return;
+            }
+
+            const message = messageInput.value.trim();
+            if (message) {
+                socket.send(message);
+                addMessage(`发送: ${message}`, 'sent');
+                messageInput.value = '';
+            }
+        }
+
+        // 事件监听
+        connectButton.addEventListener('click', connect);
+        disconnectButton.addEventListener('click', disconnect);
+        sendButton.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // 页面关闭时断开连接
+        window.addEventListener('beforeunload', disconnect);
+    </script>
+</body>
+</html>
