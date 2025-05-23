@@ -169,7 +169,7 @@ checksum = "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -283,7 +283,7 @@ checksum = "162ee34ebcb7c64a8abebc059ce0fee27c2262618d7b60ed8faf72fef13c3650"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -405,9 +405,9 @@ checksum = "1808d8983c7ca1d289188767327a24d3e6c0c6a741257745fd7fea9f8f7a7635"
 
 [[package]]
 name = "http-type"
-version = "3.71.0"
+version = "3.72.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2b366def32178dee364ecb572c6399a1eb961eff91cd205f3e0879d0642b52f7"
+checksum = "e60444695a64e58b81fba58839c080906cd056c5564b463894434a4d5dba4cd3"
 dependencies = [
  "ahash",
  "dashmap",
@@ -432,19 +432,31 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "4.101.0"
+version = "4.104.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b09f6bc01850dd5abd33caf79664f064d39327ebde340c64bd267197c7685ed"
+checksum = "e62c0d9f8243e8ed4cc8480d19b58132463019382be65d7eb847665dfb603432"
 dependencies = [
  "clonelicious",
  "color-output",
  "file-operation",
  "future-fn",
  "http-type",
+ "hyperlane-broadcast",
  "hyperlane-log",
  "recoverable-spawn",
  "recoverable-thread-pool",
  "server-manager",
+]
+
+[[package]]
+name = "hyperlane-broadcast"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7dcd964cea2ae6e4778ca27ce48989040de754f176545fc1827f5e6b15a0055b"
+dependencies = [
+ "dashmap",
+ "lombok",
+ "tokio",
 ]
 
 [[package]]
@@ -580,7 +592,7 @@ checksum = "1ec89e9337638ecdc08744df490b221a7399bf8d164eb52a665454e60e075ad6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -649,6 +661,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "30bde2b3dc3671ae49d8e2e9f044c7c005836e7a023ee57cffa25ab82764bb9e"
 
 [[package]]
+name = "lombok"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0fd3ecc97c69dd7420e63ddc37457e143cff962c7301de78e4a6ec62d45abdf7"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "lombok-macros"
 version = "1.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -656,7 +679,7 @@ checksum = "89a6c00f977434776490d523145f6de60b6b7d9ce1096c011449484c80100a40"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -870,7 +893,7 @@ checksum = "1165225c21bff1f3bbce98f5a1f889949bc902d3575308cc7b0de30b4f6d27c7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -920,7 +943,7 @@ checksum = "5b0276cf7f2c73365f7157c8123c21cd9a50fbbd844757af28ca1f5925fc2a00"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -1025,6 +1048,17 @@ checksum = "aa17898d2c4216a85ad32abd51101b6eab0adef954ed1393c4557ba378625ade"
 
 [[package]]
 name = "syn"
+version = "1.0.109"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
+name = "syn"
 version = "2.0.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ce2b7fc941b3a24138a0a7cf8e858bfc6a992e7978a068a5c760deb0ed43caf"
@@ -1042,7 +1076,7 @@ checksum = "c8af7666ab7b6390ab78131fb5b0fce11d6b7a6951602017c35fa82800708971"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -1062,7 +1096,7 @@ checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -1101,7 +1135,7 @@ checksum = "6e06d43f1345a3bcd39f6a56dbb7dcab2ba47e68e8ac134855e7e2bdbaf8cab8"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -1202,7 +1236,7 @@ dependencies = [
  "log",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
  "wasm-bindgen-shared",
 ]
 
@@ -1224,7 +1258,7 @@ checksum = "8ae87ea40c9f689fc23f209965b6fb8a99ad69aeeb0231408be24920604395de"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -1365,7 +1399,7 @@ checksum = "2380878cad4ac9aac1e2435f3eb4020e8374b5f13c296cb75b4620ff8e229154"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
  "synstructure",
 ]
 
@@ -1386,7 +1420,7 @@ checksum = "a996a8f63c5c4448cd959ac1bab0aaa3306ccfd060472f85943ee0750f0169be"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
 
 [[package]]
@@ -1406,7 +1440,7 @@ checksum = "d71e5d6e06ab090c67b5e44993ec16b72dcbaabc526db883a360057678b48502"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
  "synstructure",
 ]
 
@@ -1429,5 +1463,5 @@ checksum = "6eafa6dfb17584ea3e2bd6e76e0cc15ad7af12b09abdd1ca55961bed9b1063c6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.101",
 ]
