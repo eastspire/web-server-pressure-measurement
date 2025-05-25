@@ -5,7 +5,7 @@ edition = "2024"
 
 [dependencies]
 hyperlane = "5.0.4"
-hyperlane-utils = "0.1.0"
+hyperlane-utils = "0.1.1"
 
 [profile.dev]
 incremental = false
