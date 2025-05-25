@@ -1,11 +1,10 @@
 use core_affinity::CoreId;
 use hyperlane::*;
-use hyperlane_utils::*;
+use std::thread::JoinHandle;
 use tokio::runtime::{Builder, Runtime};
 
 fn runtime() -> Runtime {
     Builder::new_multi_thread()
-        .worker_threads(get_thread_count() >> 2)
         .thread_stack_size(2097152)
         .max_blocking_threads(5120)
         .max_io_events_per_tick(5120)
