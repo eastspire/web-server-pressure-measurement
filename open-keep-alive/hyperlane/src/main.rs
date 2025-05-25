@@ -1,5 +1,6 @@
 use core_affinity::CoreId;
 use hyperlane::*;
+use std::thread::JoinHandle;
 use tokio::runtime::{Builder, Runtime};
 
 fn runtime() -> Runtime {
@@ -35,18 +36,21 @@ async fn run() {
 }
 
 fn main() {
-    let ids: Vec<CoreId> = core_affinity::get_core_ids().unwrap();
+    let mut ids: Vec<CoreId> = core_affinity::get_core_ids().unwrap();
     let worker = move |id: Option<core_affinity::CoreId>| {
         if let Some(id) = id {
             let _ = core_affinity::set_for_current(id);
             runtime().block_on(run());
         }
     };
-    let handles = ids
-        .into_iter()
-        .map(|id| std::thread::spawn(move || worker(Some(id))))
-        .collect::<Vec<_>>();
-    for handle in handles.into_iter() {
+    let handle: Vec<JoinHandle<()>> = core::iter::repeat_with(|| {
+        let id: Option<CoreId> = ids.pop();
+        std::thread::spawn(move || worker(id))
+    })
+    .take(15)
+    .collect::<Vec<_>>();
+    worker(ids.pop());
+    for handle in handle {
         handle.join().unwrap();
     }
 }
