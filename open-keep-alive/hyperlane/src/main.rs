@@ -36,9 +36,6 @@ async fn run() {
 }
 
 fn main() {
-    let cores: usize = std::thread::available_parallelism()
-        .map(|num| num.get())
-        .unwrap_or(32);
     let mut ids: Vec<CoreId> = core_affinity::get_core_ids().unwrap();
     let worker = move |id: Option<core_affinity::CoreId>| {
         if let Some(id) = id {
@@ -50,7 +47,7 @@ fn main() {
         let id: Option<CoreId> = ids.pop();
         std::thread::spawn(move || worker(id))
     })
-    .take(cores - 1)
+    .take(31)
     .collect::<Vec<_>>();
     worker(ids.pop());
     for handle in handle {
