@@ -1,4 +1,5 @@
 use hyperlane::*;
+use hyperlane_utils::*;
 use tokio::runtime::{Builder, Runtime};
 
 fn runtime() -> Runtime {
@@ -27,10 +28,7 @@ async fn run() {
     server.port(60000).await;
     server.disable_linger().await;
     server.disable_nodelay().await;
-    server.log_dir("./logs").await;
-    server.disable_log().await;
-    server.disable_inner_log().await;
-    server.disable_inner_print().await;
+    server.error_handle(|_: String| {}).await;
     server.http_line_buffer_size(512).await;
     server.websocket_buffer_size(512).await;
     server.request_middleware(request_middleware).await;
