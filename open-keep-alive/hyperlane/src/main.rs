@@ -51,6 +51,6 @@ fn main() {
     .collect::<Vec<_>>();
     worker(ids.pop());
     for handle in handle {
-        let _ = handle.join();
+        handle.join().unwrap();
     }
 }
