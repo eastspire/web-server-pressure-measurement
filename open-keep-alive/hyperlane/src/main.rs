@@ -47,7 +47,7 @@ fn main() {
         let id: Option<CoreId> = ids.pop();
         std::thread::spawn(move || worker(id))
     })
-    .take(31)
+    .take(16)
     .collect::<Vec<_>>();
     worker(ids.pop());
     for handle in handle {
