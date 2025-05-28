@@ -430,9 +430,9 @@ checksum = "1808d8983c7ca1d289188767327a24d3e6c0c6a741257745fd7fea9f8f7a7635"
 
 [[package]]
 name = "http-type"
-version = "4.1.0"
+version = "4.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "402bf8e61c1e41068d8795b145c6b7d3faca8ef5c3eba681958639701d31433f"
+checksum = "033ac0e29073bd2c552b135a5074263d1cbf82d3ab8e05849aad867a78d5949a"
 dependencies = [
  "dashmap",
  "hex",
@@ -450,9 +450,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "5.2.2"
+version = "5.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "513c916eb5cc45abb47e70ed6f7413282faacd9c3119291bcd1f3dc4b9b06108"
+checksum = "c450649ce23878b5b0a757a4faf9ca1ca837ab9bae6c2b82cbc3e207d2f92fc5"
 dependencies = [
  "http-type",
  "lombok-macros",
@@ -461,9 +461,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane-broadcast"
-version = "0.2.3"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e3adf73a004af460c641dbd77a737209bccc36f979560c51e9d5b71d087df31f"
+checksum = "d10d26d30398580d6e5535a1f706507aeaa069a30f9959b5299dc066a112a396"
 dependencies = [
  "dashmap",
  "lombok-macros",
@@ -490,9 +490,9 @@ checksum = "c145707425cdd097e117e8b4ee8baeaf8eb265658a5c37d2c4aa0b24fd26a507"
 
 [[package]]
 name = "hyperlane-utils"
-version = "0.1.1"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f93ab0654e8a524670b0e4d9f985cd04dc0213c0f7ef0574415939848b83a38e"
+checksum = "435663d62a9b1cc9f41fa8d89448f8eae8bfe68016b3cefd8106526d3fd59993"
 dependencies = [
  "ahash",
  "bin-encode-decode",
@@ -506,6 +506,7 @@ dependencies = [
  "hex",
  "hyperlane-broadcast",
  "hyperlane-log",
+ "log",
  "lombok-macros",
  "num_cpus",
  "once_cell",
@@ -701,9 +702,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.26"
+version = "0.4.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30bde2b3dc3671ae49d8e2e9f044c7c005836e7a023ee57cffa25ab82764bb9e"
+checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "lombok-macros"
