@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-hyperlane = "5.11.0"
+hyperlane = "5.12.2"
 
 [profile.dev]
 incremental = false
