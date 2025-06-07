@@ -202,15 +202,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.42.4"
+version = "1.45.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1808d8983c7ca1d289188767327a24d3e6c0c6a741257745fd7fea9f8f7a7635"
+checksum = "a6826d70d78b7246c7e5ca83d45354a40e14f82b889a958f87a2f64d8a89f75c"
 
 [[package]]
 name = "http-type"
-version = "4.11.0"
+version = "4.19.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da7fc6faa2442bddb41bcbc8ed0d0171412afa93d30968e9601279c391f3d8d7"
+checksum = "e1c3fe31bcda75db6c3882febe3213adb1153b2a1c37b9f69ed4066c8b303c15"
 dependencies = [
  "dashmap",
  "hex",
@@ -227,9 +227,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "5.13.0"
+version = "5.22.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8835226f5eed5906e02cfd8ab164140ca5b67c223353dc9ff494599f6d646ea"
+checksum = "4d65466087129559800e80a1df54494e84e9f4c2af7cb7d99f3b936732380fa1"
 dependencies = [
  "http-type",
  "lombok-macros",
