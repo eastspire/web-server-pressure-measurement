@@ -1,0 +1,27 @@
+[package]
+name = "hyper-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+http-request = "8.81.13"
+hyper = { version = "0.14.32", features = ["full"] }
+tokio = { version = "1.45.1", features = ["full"] }
+
+[profile.dev]
+incremental = false
+opt-level = 3
+lto = true
+panic = "unwind"
+debug = false
+codegen-units = 1
+strip = "debuginfo"
+
+[profile.release]
+incremental = false
+opt-level = 3
+lto = true
+panic = "unwind"
+debug = false
+codegen-units = 1
+strip = "debuginfo"

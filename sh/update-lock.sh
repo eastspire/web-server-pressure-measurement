@@ -3,4 +3,5 @@ cd ./open-keep-alive/hyperlane;
 cargo build --release;
 cd ../../close-keep-alive/hyperlane;
 cargo build --release;
-cd ../../;
+cd ../../test-request;
+cargo build --release;
