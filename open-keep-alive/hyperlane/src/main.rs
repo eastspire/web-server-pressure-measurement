@@ -14,9 +14,13 @@ fn runtime() -> Runtime {
 
 async fn request_middleware(ctx: Context) {
     let _ = ctx
-        .set_response_header(CONNECTION, CONNECTION_KEEP_ALIVE)
+        .set_response_header(CONNECTION, KEEP_ALIVE)
         .await
-        .send_response(200, "Hello")
+        .set_response_status_code(200)
+        .await
+        .set_response_body("Hello")
+        .await
+        .send()
         .await;
     let _ = ctx.flush().await;
 }
