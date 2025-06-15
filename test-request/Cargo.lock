@@ -437,9 +437,9 @@ checksum = "ebb606af516873026d106412e1f2e3e4ca5d72d5ac1ff97d66169c5bc88eef91"
 
 [[package]]
 name = "http-request"
-version = "8.81.13"
+version = "8.83.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a5cf471e438715117672f2cb5f155f63b4c85496019dab9f2ff022e7ea8e02e"
+checksum = "2c962286ba53d339a9c0392b8aecfacb5079648d06ee5ddaed1bd30adadc2458"
 dependencies = [
  "http-type",
  "rustls",
@@ -450,9 +450,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "4.21.1"
+version = "4.22.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "181fe4966e416ce9c4213b76423c1fc1e2b16799bd2765fc791d7c063b7eb9ad"
+checksum = "c58eb9dcf3a7358d389f79229c64ef0d999199b238dabfb5737e831430effcad"
 dependencies = [
  "dashmap",
  "hex",

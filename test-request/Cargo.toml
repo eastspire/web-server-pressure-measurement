@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-http-request = "8.81.13"
+http-request = "8.83.2"
 hyper = { version = "0.14.32", features = ["full"] }
 tokio = { version = "1.45.1", features = ["full"] }
 
