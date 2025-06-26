@@ -36,7 +36,7 @@ fn http_request() {
             .buffer(100)
             .http1_1_only()
             .undecode()
-            .build();
+            .build_sync();
         let response = _request_builder.send();
         if response.is_err() {
             err_times += 1;
