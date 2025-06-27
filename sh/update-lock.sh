@@ -1,7 +1,10 @@
 #!/bin/bash
 cd ./open-keep-alive/hyperlane;
-cargo build --release;
+rm -rf Cargo.lock;
+cargo check;
 cd ../../close-keep-alive/hyperlane;
-cargo build --release;
+rm -rf Cargo.lock;
+cargo check;
 cd ../../test-request;
-cargo build --release;
+rm -rf Cargo.lock;
+cargo check;

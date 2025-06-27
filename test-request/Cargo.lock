@@ -556,15 +556,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.48.0"
+version = "1.49.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67f8cf4294ddfe85d2c2058f33caa9c82baa153a5826c293b2254ca293e6c11c"
+checksum = "2ab0d43438c434e04c007b29b281fb9b85e669a605acf1257847ac4b8fe4114c"
 
 [[package]]
 name = "http-request"
-version = "8.88.1"
+version = "8.88.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16ccc2dc0a9775a5381cfb1f9bc5fb3830d8715c78035a4b7bb98c784671e4cd"
+checksum = "05dfd5419cb840e3a7d81e4e29c06507c93e68d441812e2093ccd3ddb0a6a979"
 dependencies = [
  "futures",
  "http-type",
@@ -580,9 +580,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "4.24.2"
+version = "4.25.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6ae88a78ab4df0168da34d8cce9e3f95a031c150dd0ec503a6e2cd9f913fb819"
+checksum = "260397d77f120c957c6b1d33a07b38580844c3b2f3e4a6927161eca22ce3e2e8"
 dependencies = [
  "dashmap",
  "hex",
@@ -751,9 +751,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "2.9.0"
+version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cea70ddb795996207ad57735b50c5982d8844f38ba9ee5f1aedcfb708a2aa11e"
+checksum = "fe4cd85333e22411419a0bcae1297d25e58c9443848b11dc6a86fefe8c78a661"
 dependencies = [
  "equivalent",
  "hashbrown 0.15.4",
