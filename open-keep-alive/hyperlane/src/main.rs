@@ -31,7 +31,7 @@ async fn run() {
     server.port(60000).await;
     server.disable_linger().await;
     server.disable_nodelay().await;
-    server.error_handler(|_: String| {}).await;
+    server.error_handler(async |_: PanicInfo| {}).await;
     server.http_buffer_size(512).await;
     server.ws_buffer_size(512).await;
     server.request_middleware(request_middleware).await;
