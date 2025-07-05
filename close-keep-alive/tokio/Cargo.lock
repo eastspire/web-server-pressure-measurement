@@ -221,12 +221,12 @@ dependencies = [
 name = "tokio"
 version = "0.1.0"
 dependencies = [
- "tokio 1.45.0",
+ "tokio *",
 ]
 
 [[package]]
 name = "tokio"
-version = "1.45.0"
+version = "*"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2513ca694ef9ede0fb23fe71a4ee4107cb102b9dc1930f6d0fd77aae068ae165"
 dependencies = [
