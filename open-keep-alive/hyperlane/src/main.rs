@@ -14,6 +14,8 @@ fn runtime() -> Runtime {
 
 async fn request_middleware(ctx: Context) {
     let _ = ctx
+        .set_response_version(HttpVersion::HTTP1_1)
+        .await
         .set_response_header(CONNECTION, KEEP_ALIVE)
         .await
         .set_response_status_code(200)
@@ -31,9 +33,9 @@ async fn run() {
     server.port(60000).await;
     server.disable_linger().await;
     server.disable_nodelay().await;
-    server.error_handler(async |_: PanicInfo| {}).await;
-    server.http_buffer_size(512).await;
-    server.ws_buffer_size(512).await;
+    server.panic_hook(async |_: Context| {}).await;
+    server.http_buffer(512).await;
+    server.ws_buffer(512).await;
     server.request_middleware(request_middleware).await;
     server.run().await.unwrap();
 }
