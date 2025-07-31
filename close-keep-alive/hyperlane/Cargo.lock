@@ -201,9 +201,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "5.66.1"
+version = "5.66.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "635c51909501c4c7ee375067ad530157395b9d26a36677387e290a1fc4e6ba5b"
+checksum = "0df02aad9b3cbe69e46762b4fce9bd0b16c4dc2ebac5ada89674d612e6c5ff21"
 dependencies = [
  "http-type",
  "lombok-macros",
