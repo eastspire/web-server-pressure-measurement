@@ -183,9 +183,9 @@ checksum = "887157a2e25d623755ac1dcc670e2e2d20e46dcbc2b2389a048dcb0dab74dacd"
 
 [[package]]
 name = "http-type"
-version = "4.55.2"
+version = "4.55.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "986a7315b8ea73b17750e6306b6fb29eaacdb0061812715074ffbded248181a3"
+checksum = "f44b5ba384056338f7b2081157a76d742d7d6d174f159bd30e49d16bbde19013"
 dependencies = [
  "hex",
  "http-compress",
@@ -201,9 +201,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "5.66.5"
+version = "5.66.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0df02aad9b3cbe69e46762b4fce9bd0b16c4dc2ebac5ada89674d612e6c5ff21"
+checksum = "62d8a41381a63c6dfca817a95a9d0e139d6ea997291d7ce5447a060b3b627f2d"
 dependencies = [
  "http-type",
  "lombok-macros",
@@ -605,9 +605,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.141"
+version = "1.0.142"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30b9eff21ebe718216c6ec64e1d9ac57087aad11efc64e32002bce4a0d4c03d3"
+checksum = "030fedb782600dcbd6f02d479bf0d817ac3bb40d644745b769d6a96bc3afc5a7"
 dependencies = [
  "itoa",
  "memchr",
