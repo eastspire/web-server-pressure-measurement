@@ -12,7 +12,11 @@ fn runtime() -> Runtime {
         .unwrap()
 }
 
-async fn request_middleware(ctx: Context) {
+async fn root(ctx: Context) {
+    let send = || async {
+        let _ = ctx.send().await;
+        let _ = ctx.flush().await;
+    };
     let _ = ctx
         .set_response_version(HttpVersion::HTTP1_1)
         .await
@@ -21,27 +25,37 @@ async fn request_middleware(ctx: Context) {
         .set_response_status_code(200)
         .await
         .set_response_body("Hello")
-        .await
-        .send()
         .await;
+    send().await;
     while let Ok(_) = ctx.http_from_stream(64).await {
-        let _ = ctx.send().await;
+        send().await;
     }
     let _ = ctx.closed().await;
 }
 
 async fn run() {
-    let server: Server = Server::new();
-    server.host("0.0.0.0").await;
-    server.port(60000).await;
-    server.disable_linger().await;
-    server.disable_nodelay().await;
-    server.panic_hook(async |_: Context| {}).await;
-    server.http_buffer(512).await;
-    server.ws_buffer(512).await;
-    server.disable_http_hook("/").await;
-    server.request_middleware(request_middleware).await;
-    server.run().await.unwrap();
+    Server::new()
+        .host("0.0.0.0")
+        .await
+        .port(60000)
+        .await
+        .disable_linger()
+        .await
+        .disable_nodelay()
+        .await
+        .panic_hook(async |_: Context| {})
+        .await
+        .http_buffer(512)
+        .await
+        .ws_buffer(512)
+        .await
+        .disable_http_hook("/")
+        .await
+        .route("/", root)
+        .await
+        .run()
+        .await
+        .unwrap();
 }
 
 fn main() {
