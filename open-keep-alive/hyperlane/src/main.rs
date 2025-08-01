@@ -12,11 +12,7 @@ fn runtime() -> Runtime {
         .unwrap()
 }
 
-async fn root(ctx: Context) {
-    let send = || async {
-        let _ = ctx.send().await;
-        let _ = ctx.flush().await;
-    };
+async fn request_middleware(ctx: Context) {
     let _ = ctx
         .set_response_version(HttpVersion::HTTP1_1)
         .await
@@ -25,12 +21,9 @@ async fn root(ctx: Context) {
         .set_response_status_code(200)
         .await
         .set_response_body("Hello")
+        .await
+        .send()
         .await;
-    send().await;
-    while let Ok(_) = ctx.http_from_stream(64).await {
-        send().await;
-    }
-    let _ = ctx.closed().await;
 }
 
 async fn run() {
@@ -49,9 +42,7 @@ async fn run() {
         .await
         .ws_buffer(512)
         .await
-        .disable_http_hook("/")
-        .await
-        .route("/", root)
+        .request_middleware(request_middleware)
         .await
         .run()
         .await
