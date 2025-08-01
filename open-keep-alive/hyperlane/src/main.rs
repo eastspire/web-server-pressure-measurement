@@ -39,7 +39,7 @@ async fn run() {
     server.panic_hook(async |_: Context| {}).await;
     server.http_buffer(512).await;
     server.ws_buffer(512).await;
-    server.disable_http_hook("/").await;
+    server.disable_http_hook("{any:^.*$}}").await;
     server.request_middleware(request_middleware).await;
     server.run().await.unwrap();
 }
