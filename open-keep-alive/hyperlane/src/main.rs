@@ -1,4 +1,4 @@
-use hyperlane::*;
+use hyperlane::{tokio::task::yield_now, *};
 use tokio::runtime::{Builder, Runtime};
 
 fn runtime() -> Runtime {
@@ -24,8 +24,13 @@ async fn request_middleware(ctx: Context) {
         .await
         .send()
         .await;
+    let mut idx = 0;
     while let Ok(_) = ctx.http_from_stream(512).await {
         let _ = ctx.send().await;
+        if idx % 10 == 0 {
+            yield_now().await;
+        }
+        idx += 1;
     }
     let _ = ctx.flush().await;
 }
