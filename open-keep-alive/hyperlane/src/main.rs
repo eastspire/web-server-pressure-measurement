@@ -24,6 +24,9 @@ async fn request_middleware(ctx: Context) {
         .await
         .send()
         .await;
+    while let Ok(_) = ctx.http_from_stream(512).await {
+        let _ = ctx.send().await;
+    }
     let _ = ctx.flush().await;
 }
 
@@ -36,6 +39,7 @@ async fn run() {
     server.panic_hook(async |_: Context| {}).await;
     server.http_buffer(512).await;
     server.ws_buffer(512).await;
+    server.disable_http_hook("/").await;
     server.request_middleware(request_middleware).await;
     server.run().await.unwrap();
 }
