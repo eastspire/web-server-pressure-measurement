@@ -24,7 +24,7 @@ async fn request_middleware(ctx: Context) {
         .await
         .send()
         .await;
-    while let Ok(_) = ctx.http_from_stream(512).await {
+    while let Ok(_) = ctx.http_from_stream(16).await {
         let _ = ctx.send().await;
     }
     let _ = ctx.closed().await;
