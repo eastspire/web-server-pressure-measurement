@@ -27,7 +27,7 @@ async fn root(ctx: Context) {
         .set_response_body("Hello")
         .await;
     send().await;
-    while let Ok(_) = ctx.http_from_stream(64).await {
+    while let Ok(_) = ctx.http_from_stream(256).await {
         send().await;
     }
     let _ = ctx.closed().await;
