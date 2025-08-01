@@ -1,4 +1,4 @@
-use hyperlane::{tokio::task::yield_now, *};
+use hyperlane::*;
 use tokio::runtime::{Builder, Runtime};
 
 fn runtime() -> Runtime {
