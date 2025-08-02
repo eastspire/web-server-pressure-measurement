@@ -166,9 +166,9 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "http-compress"
-version = "2.16.1"
+version = "2.16.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c314f79b2e2c441161f55a79a545206f1ac93757009a7ba3bb3265ea4682f9e7"
+checksum = "5f05a0df775c3bc6781f6cac42e775f2f26c07110f123b7084fb0cee010f9b93"
 dependencies = [
  "brotli",
  "flate2",
@@ -177,15 +177,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.59.2"
+version = "1.59.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "887157a2e25d623755ac1dcc670e2e2d20e46dcbc2b2389a048dcb0dab74dacd"
+checksum = "8d68fc1cd9b672083471b783a0f17f4df5eb470f79a2685b6f55e631618bcd2b"
 
 [[package]]
 name = "http-type"
-version = "4.55.2"
+version = "4.55.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "986a7315b8ea73b17750e6306b6fb29eaacdb0061812715074ffbded248181a3"
+checksum = "f2bddb967a8397bc3fab786c9acd7bc0b74855a53b017310839c0ed786bb2a01"
 dependencies = [
  "hex",
  "http-compress",
@@ -201,9 +201,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "5.66.5"
+version = "5.66.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0df02aad9b3cbe69e46762b4fce9bd0b16c4dc2ebac5ada89674d612e6c5ff21"
+checksum = "774f11795bd656637e5b93116f449bf20be8e04ced64d518deeb9bfd009c55cd"
 dependencies = [
  "http-type",
  "lombok-macros",
@@ -365,9 +365,9 @@ checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "lombok-macros"
-version = "1.13.7"
+version = "1.13.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1646ba3efb4eb20aef4464578ab7a9e9742457d0891643a0f0078e6780cd60ae"
+checksum = "957cebc76c95471ab0ea52c2c2b0c15cdccefd1a7de24e753357b3322fafd420"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -605,9 +605,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.141"
+version = "1.0.142"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30b9eff21ebe718216c6ec64e1d9ac57087aad11efc64e32002bce4a0d4c03d3"
+checksum = "030fedb782600dcbd6f02d479bf0d817ac3bb40d644745b769d6a96bc3afc5a7"
 dependencies = [
  "itoa",
  "memchr",
@@ -718,9 +718,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.47.0"
+version = "1.47.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "43864ed400b6043a4757a25c7a64a8efde741aed79a056a2fb348a406701bb35"
+checksum = "89e49afdadebb872d3145a5638b59eb0691ea23e46ca484037cfab3b76b95038"
 dependencies = [
  "backtrace",
  "bytes",
