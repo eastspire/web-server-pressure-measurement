@@ -47,7 +47,9 @@ async fn run() {
         .await
         .run()
         .await
-        .unwrap();
+        .unwrap()
+        .get_wait_hook()()
+    .await;
 }
 
 fn main() {

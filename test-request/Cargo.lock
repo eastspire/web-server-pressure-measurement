@@ -519,9 +519,9 @@ dependencies = [
 
 [[package]]
 name = "http-compress"
-version = "2.16.4"
+version = "2.16.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f05a0df775c3bc6781f6cac42e775f2f26c07110f123b7084fb0cee010f9b93"
+checksum = "757db00ff4cb103647c32497514aceeb685bc2686d84c8707124f1c8eeaac2e3"
 dependencies = [
  "brotli",
  "flate2",
@@ -536,9 +536,9 @@ checksum = "8d68fc1cd9b672083471b783a0f17f4df5eb470f79a2685b6f55e631618bcd2b"
 
 [[package]]
 name = "http-request"
-version = "8.91.6"
+version = "8.91.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "094aacf1ad81b323c6aefd3ad96df9dae574776681095f02a44b59eadd48ef0e"
+checksum = "3dfc545850cb626659aa3cc59e4e78eb37b88503a0ec2a759c39010a5f3bddc3"
 dependencies = [
  "futures",
  "http-type",
@@ -553,9 +553,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "4.55.5"
+version = "4.55.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2bddb967a8397bc3fab786c9acd7bc0b74855a53b017310839c0ed786bb2a01"
+checksum = "06966dd52009ec38901b439b9060dd9ed0ead6d1204f214fa9a933ae3cb85328"
 dependencies = [
  "hex",
  "http-compress",
@@ -825,9 +825,9 @@ checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "lombok-macros"
-version = "1.13.10"
+version = "1.13.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "957cebc76c95471ab0ea52c2c2b0c15cdccefd1a7de24e753357b3322fafd420"
+checksum = "7647fa75302b5ffffa7ff8bdb78220beb7da2be7eaf3a939453012f25931d749"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1213,9 +1213,9 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "signal-hook-registry"
-version = "1.4.5"
+version = "1.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9203b8055f63a2a00e2f593bb0510367fe707d7ff1e5c872de2f537b339e5410"
+checksum = "b2a4719bff48cee6b39d12c020eeb490953ad2443b7055bd0b21fca26bd8c28b"
 dependencies = [
  "libc",
 ]
@@ -1391,9 +1391,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-util"
-version = "0.7.15"
+version = "0.7.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "66a539a9ad6d5d281510d5bd368c973d636c02dbf8a67300bfb6b950696ad7df"
+checksum = "14307c986784f72ef81c89db7d9e28d6ac26d16213b109ea501696195e6e3ce5"
 dependencies = [
  "bytes",
  "futures-core",
@@ -1818,9 +1818,9 @@ dependencies = [
 
 [[package]]
 name = "zerovec"
-version = "0.11.2"
+version = "0.11.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a05eb080e015ba39cc9e23bbe5e7fb04d5fb040350f99f34e338d5fdd294428"
+checksum = "e7aa2bd55086f1ab526693ecbe444205da57e25f4489879da80635a46d90e73b"
 dependencies = [
  "yoke",
  "zerofrom",
