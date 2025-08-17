@@ -34,20 +34,21 @@ async fn root(ctx: Context) {
 }
 
 async fn run() {
-    Server::new()
+    let config: ServerConfig = ServerConfig::new().await;
+    config
         .host("0.0.0.0")
         .await
         .port(60000)
         .await
-        .disable_linger()
-        .await
         .disable_nodelay()
-        .await
-        .panic_hook(async |_: Context| {})
         .await
         .http_buffer(512)
         .await
         .ws_buffer(512)
+        .await;
+    Server::from(config)
+        .await
+        .panic_hook(async |_: Context| {})
         .await
         .disable_http_hook("/")
         .await
