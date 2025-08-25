@@ -46,9 +46,7 @@ async fn run() {
         .await
         .ws_buffer(256)
         .await;
-    Server::from(config)
-        .await
-        .panic_hook(async |_: Context| {})
+    let server_hook: ServerHook = Server::from(config)
         .await
         .disable_http_hook("/")
         .await
@@ -56,9 +54,13 @@ async fn run() {
         .await
         .run()
         .await
-        .unwrap()
-        .wait()
-        .await;
+        .unwrap();
+    let server_hook_clone: ServerHook = server_hook.clone();
+    tokio::spawn(async move {
+        tokio::time::sleep(std::time::Duration::from_secs(60)).await;
+        server_hook.shutdown().await;
+    });
+    server_hook_clone.wait().await;
 }
 
 fn main() {

@@ -36,9 +36,9 @@ async fn run() {
         .await
         .disable_nodelay()
         .await
-        .http_buffer(512)
+        .http_buffer(256)
         .await
-        .ws_buffer(512)
+        .ws_buffer(256)
         .await;
     Server::from(config)
         .await
