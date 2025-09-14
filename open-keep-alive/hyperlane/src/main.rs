@@ -42,15 +42,11 @@ async fn run() {
         .await
         .disable_nodelay()
         .await
-        .http_buffer(256)
-        .await
-        .ws_buffer(256)
+        .buffer(256)
         .await;
     Server::from(config)
         .await
         .panic_hook(async |_: Context| {})
-        .await
-        .disable_http_hook("/")
         .await
         .route("/", root)
         .await
