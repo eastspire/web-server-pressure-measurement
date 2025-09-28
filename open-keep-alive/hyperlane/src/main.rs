@@ -1,6 +1,8 @@
 use hyperlane::*;
 use tokio::runtime::{Builder, Runtime};
 
+pub const BODY: &[u8] = b"Hello";
+
 fn runtime() -> Runtime {
     Builder::new_multi_thread()
         .worker_threads(8)
@@ -24,7 +26,7 @@ async fn root(ctx: Context) {
         .await
         .set_response_status_code(200)
         .await
-        .set_response_body("Hello")
+        .set_response_body(BODY)
         .await;
     send().await;
     while let Ok(_) = ctx.http_from_stream(256).await {
