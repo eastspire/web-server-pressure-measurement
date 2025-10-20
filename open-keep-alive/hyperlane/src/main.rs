@@ -3,6 +3,9 @@ use tokio::runtime::{Builder, Runtime};
 
 pub const BODY: &[u8] = b"Hello";
 
+struct RootRoute;
+struct PanicHook;
+
 fn runtime() -> Runtime {
     Builder::new_multi_thread()
         .worker_threads(8)
@@ -14,25 +17,39 @@ fn runtime() -> Runtime {
         .unwrap()
 }
 
-async fn root(ctx: Context) {
-    let send = || async {
-        let _ = ctx.send().await;
-        let _ = ctx.flush().await;
-    };
-    let _ = ctx
-        .set_response_version(HttpVersion::HTTP1_1)
-        .await
-        .set_response_header(CONNECTION, KEEP_ALIVE)
-        .await
-        .set_response_status_code(200)
-        .await
-        .set_response_body(BODY)
-        .await;
-    send().await;
-    while let Ok(_) = ctx.http_from_stream(256).await {
-        send().await;
+impl ServerHook for PanicHook {
+    async fn new(_ctx: &Context) -> Self {
+        Self
     }
-    let _ = ctx.closed().await;
+
+    async fn handle(self, _ctx: &Context) {}
+}
+
+impl ServerHook for RootRoute {
+    async fn new(_ctx: &Context) -> Self {
+        Self
+    }
+
+    async fn handle(self, ctx: &Context) {
+        let send = || async {
+            let _ = ctx.send().await;
+            let _ = ctx.flush().await;
+        };
+        let _ = ctx
+            .set_response_version(HttpVersion::HTTP1_1)
+            .await
+            .set_response_header(CONNECTION, KEEP_ALIVE)
+            .await
+            .set_response_status_code(200)
+            .await
+            .set_response_body(BODY)
+            .await;
+        send().await;
+        while let Ok(_) = ctx.http_from_stream(256).await {
+            send().await;
+        }
+        let _ = ctx.closed().await;
+    }
 }
 
 async fn run() {
@@ -48,9 +65,9 @@ async fn run() {
         .await;
     Server::from(config)
         .await
-        .panic_hook(async |_: Context| {})
+        .panic_hook::<PanicHook>()
         .await
-        .route("/", root)
+        .route::<RootRoute>("/")
         .await
         .run()
         .await
