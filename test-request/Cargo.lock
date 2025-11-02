@@ -479,15 +479,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.64.1"
+version = "1.68.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "024182a8acc397613d6afdea76c8614c32296430248c99a4f9869d7b389b8456"
+checksum = "6bd414126bc050b1437bed5a52939854b2b7ef214e8e05aacca3663529514e3e"
 
 [[package]]
 name = "http-request"
-version = "8.91.34"
+version = "8.91.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41c833b15e667340ab383db908c298b773fc7f1840744ddf45ad5bb968d6baa2"
+checksum = "1c3956731641cd6b88c3bb7de18c46ebe069d84a152aac02bd80240a6d7967ab"
 dependencies = [
  "futures",
  "http-type",
@@ -502,9 +502,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "5.5.8"
+version = "5.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "abb3fd7b0174cfa0fe95c630fc1b606eb82b4b2a44a47732d5474c79ec6265bd"
+checksum = "3cb36d75dbf127e3bfa1c7f404ba69edd760a3a5a93687caaafdb07f73eff64f"
 dependencies = [
  "hex",
  "http-compress",
@@ -1434,9 +1434,9 @@ dependencies = [
 
 [[package]]
 name = "webpki-roots"
-version = "1.0.3"
+version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32b130c0d2d49f8b6889abc456e795e82525204f27c42cf767cf0d7734e089b8"
+checksum = "b2878ef029c47c6e8cf779119f20fcf52bde7ad42a731b2a304bc221df17571e"
 dependencies = [
  "rustls-pki-types",
 ]
