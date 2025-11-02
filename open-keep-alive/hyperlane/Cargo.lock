@@ -165,10 +165,11 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "10.11.1"
+version = "10.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2f395fe020580eedcdadf295792d5036dac81582253cfab484164352760f6a86"
+checksum = "2c042df01c9d47727269228fa5bacbb25504a6785539c0e5942dd8b2541c33a0"
 dependencies = [
+ "aho-corasick",
  "http-type",
  "inventory",
  "lombok-macros",
