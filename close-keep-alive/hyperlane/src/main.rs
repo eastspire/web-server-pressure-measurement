@@ -54,8 +54,6 @@ async fn run() {
         .port(60000)
         .await
         .disable_nodelay()
-        .await
-        .buffer(256)
         .await;
     Server::from(config)
         .await
