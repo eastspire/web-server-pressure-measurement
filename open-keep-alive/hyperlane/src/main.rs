@@ -54,13 +54,7 @@ impl ServerHook for RootRoute {
 
 async fn run() {
     let config: ServerConfig = ServerConfig::new().await;
-    config
-        .host("0.0.0.0")
-        .await
-        .port(60000)
-        .await
-        .disable_nodelay()
-        .await;
+    config.port(60000).await.disable_nodelay().await;
     Server::from(config)
         .await
         .panic_hook::<PanicHook>()
