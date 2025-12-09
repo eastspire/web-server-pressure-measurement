@@ -43,7 +43,6 @@ impl ServerHook for RootRoute {
             .send()
             .await;
         let _ = ctx.flush().await;
-        ctx.closed().await;
     }
 }
 
