@@ -93,9 +93,9 @@ dependencies = [
 
 [[package]]
 name = "flate2"
-version = "1.1.7"
+version = "1.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2152dbcb980c05735e2a651d96011320a949eb31a0c8b38b72645ce97dec676"
+checksum = "bfe33edd8e85a12a67454e37f8c75e730830d83e313556ab9ebf9ee7fbeb3bfb"
 dependencies = [
  "crc32fast",
  "miniz_oxide",
@@ -130,9 +130,9 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "http-compress"
-version = "3.0.3"
+version = "3.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a7b163ab0da395ee1f950d547b44ac3b73ed1a351d53454d6ae811e9daa288e"
+checksum = "950a3ae5a3b758898faf09618bc5941f6b3d734eb60776ff3cc3ab7358e4199b"
 dependencies = [
  "brotli",
  "flate2",
@@ -141,15 +141,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.73.0"
+version = "1.73.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7886400d92b0eb2db84097de69ed4649ca9466f4c6b4e8cb342a3b46934a8d43"
+checksum = "b074752e3fc9c2a4eb10acfb8bb3a3d5a0cc9fa663628bfe6ca17eb190401393"
 
 [[package]]
 name = "http-type"
-version = "5.11.0"
+version = "5.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b27d55be58ea8bc2ab73573aeafa68fd50b3098813f83029bcb766f1f1c61b3b"
+checksum = "dd4043c96de9c59122298ffe9b2904f2fdea71830d7a1f7a825e81709c0fedb2"
 dependencies = [
  "hex",
  "http-compress",
@@ -165,9 +165,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "10.14.0"
+version = "10.14.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6abaa8b50397c4a9d2d0d969ccba9cecdad7bf0fa75c7da0335d6895c3d0ce98"
+checksum = "08f9d04168827967202475d6e170545049d06f2952a13c5eb274d7afbc564a52"
 dependencies = [
  "aho-corasick",
  "http-type",
@@ -331,9 +331,9 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "lombok-macros"
-version = "1.13.13"
+version = "1.13.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3bf89b026ebf6e1c51f466b40f60f8e90a64305d9cf07268e1adaeceefcb3c7a"
+checksum = "02f7483ca036f1985bf3fa233bd4ee0c83b06da927387ef3692045f3560445b0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -607,9 +607,9 @@ dependencies = [
 
 [[package]]
 name = "simd-adler32"
-version = "0.3.7"
+version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d66dc143e6b11c1eddc06d5c423cfc97062865baf299914ab64caa38182078fe"
+checksum = "e320a6c5ad31d271ad523dcf3ad13e2767ad8b1cb8f047f75a8aeaf8da139da2"
 
 [[package]]
 name = "smallvec"
