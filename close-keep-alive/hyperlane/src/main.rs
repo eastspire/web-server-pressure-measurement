@@ -40,7 +40,7 @@ impl ServerHook for RootRoute {
             .await
             .set_response_body(BODY)
             .await
-            .send()
+            .send_once()
             .await;
         let _ = ctx.flush().await;
     }
