@@ -1,0 +1,9 @@
+{
+  "name": "multi-thread-client",
+  "version": "1.0.0",
+  "description": "Multi-thread HTTP client for performance testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
