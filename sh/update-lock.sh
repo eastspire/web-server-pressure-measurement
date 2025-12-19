@@ -15,3 +15,5 @@ cd ../../flamegraph;
 rm -rf Cargo.lock;
 cargo fmt;
 cargo check;
+cd ../;
+./sh/flamegraph.sh;
