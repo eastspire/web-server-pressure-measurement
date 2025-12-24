@@ -416,15 +416,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.73.2"
+version = "1.78.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "748cd7866cc9dc74fc039e1cbc9984cb0d86f345fe3099398f2e5bc4bbe74b72"
+checksum = "5dd2b82a08026cba5a31fe6a3ba2abb9c9b977014370a116fed9c6c30b9aec8f"
 
 [[package]]
 name = "http-request"
-version = "8.91.49"
+version = "8.91.59"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ae1d4cea505daab1a586e16b2d315d6c2662aebc80bb8c2b16c6061cd0125f8c"
+checksum = "cde2b1da29d7c6bcaf301839f4b6ac553334b4dcaf04c98f3592e6bb06a4f21c"
 dependencies = [
  "futures",
  "http-type",
@@ -439,9 +439,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "5.11.5"
+version = "5.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9a1d71d2d6886484b34b8912bf1e8d0403edae7be8948dd5ca633b8ad128c005"
+checksum = "087ab05631d62289f9e78ba465f26f54ef4b6b5547b7e3bb7b2c7cc35905cf8c"
 dependencies = [
  "hex",
  "http-compress",
@@ -614,9 +614,9 @@ dependencies = [
 
 [[package]]
 name = "itoa"
-version = "1.0.15"
+version = "1.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
+checksum = "7ee5b5339afb4c41626dde77b7a611bd4f2c202b897852b4bcf5d03eddc61010"
 
 [[package]]
 name = "jobserver"
@@ -872,9 +872,9 @@ dependencies = [
 
 [[package]]
 name = "ryu"
-version = "1.0.20"
+version = "1.0.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "28d3b2b1366ec20994f1fd18c3c594f05c5dd4bc44d8bb0c1c632c8d6829481f"
+checksum = "62049b2877bf12821e8f9ad256ee38fdc31db7387ec2d3b3f403024de2034aea"
 
 [[package]]
 name = "scopeguard"
@@ -926,15 +926,15 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.145"
+version = "1.0.147"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "402a6f66d8c709116cf22f558eab210f5a50187f702eb4d7e5ef38d9a7f1c79c"
+checksum = "6af14725505314343e673e9ecb7cd7e8a36aa9791eb936235a3567cc31447ae4"
 dependencies = [
  "itoa",
  "memchr",
- "ryu",
  "serde",
  "serde_core",
+ "zmij",
 ]
 
 [[package]]
@@ -1560,3 +1560,9 @@ dependencies = [
  "quote",
  "syn",
 ]
+
+[[package]]
+name = "zmij"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e404bcd8afdaf006e529269d3e85a743f9480c3cef60034d77860d02964f3ba"
