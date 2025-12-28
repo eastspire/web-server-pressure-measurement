@@ -32,7 +32,7 @@ impl ServerHook for RootRoute {
 
     async fn handle(self, ctx: &Context) {
         let _ = ctx
-            .set_response_version(HttpVersion::HTTP1_1)
+            .set_response_version(HttpVersion::Http1_1)
             .await
             .set_response_header(CONNECTION, CLOSE)
             .await
