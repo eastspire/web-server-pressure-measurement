@@ -36,7 +36,7 @@ impl ServerHook for RootRoute {
             let _ = ctx.flush().await;
         };
         let _ = ctx
-            .set_response_version(HttpVersion::HTTP1_1)
+            .set_response_version(HttpVersion::Http1_1)
             .await
             .set_response_header(CONNECTION, KEEP_ALIVE)
             .await
@@ -45,7 +45,7 @@ impl ServerHook for RootRoute {
             .set_response_body(BODY)
             .await;
         send().await;
-        while let Ok(_) = ctx.http_from_stream(256).await {
+        while let Ok(_) = ctx.http_from_stream(RequestConfig::default()).await {
             send().await;
         }
         let _ = ctx.closed().await;
@@ -54,15 +54,7 @@ impl ServerHook for RootRoute {
 
 async fn run() {
     let config: ServerConfig = ServerConfig::new().await;
-    config
-        .host("0.0.0.0")
-        .await
-        .port(60000)
-        .await
-        .disable_nodelay()
-        .await
-        .buffer(256)
-        .await;
+    config.port(60000).await.disable_nodelay().await;
     let server_hook: ServerControlHook = Server::from(config)
         .await
         .panic_hook::<PanicHook>()

@@ -1,5 +1,4 @@
 use std::time::{Duration, Instant};
-use tokio;
 
 static TIMES: u128 = 10000;
 static URL: &str = "http://127.0.0.1:60000/";
@@ -21,7 +20,7 @@ async fn hyper() {
         total_times += duration.as_micros();
     }
     println!("hyper agv time: {} us", total_times / TIMES);
-    println!("hyper error times: {}", err_times);
+    println!("hyper error times: {err_times}");
 }
 
 fn http_request() {
@@ -45,7 +44,7 @@ fn http_request() {
         total_times += duration.as_micros();
     }
     println!("http-request agv time: {} us", total_times / TIMES);
-    println!("http-request error times: {}", err_times);
+    println!("http-request error times: {err_times}");
 }
 
 /// 阿帕奇

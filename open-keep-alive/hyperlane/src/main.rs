@@ -45,7 +45,7 @@ impl ServerHook for RootRoute {
             .set_response_body(BODY)
             .await;
         send().await;
-        while let Ok(_) = ctx.http_from_stream(256).await {
+        while let Ok(_) = ctx.http_from_stream(RequestConfig::default()).await {
             send().await;
         }
         let _ = ctx.closed().await;
