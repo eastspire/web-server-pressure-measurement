@@ -449,9 +449,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "5.26.0"
+version = "5.26.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6d0a1f8d020f929d13d5e095fa61f07c0b4d13474a95658ab6ffbe8144d8306d"
+checksum = "0a6318004b422e63ac965a662de8810c5df2c8a1fee15bad87e69b53b54d5094"
 dependencies = [
  "hex",
  "http-compress",

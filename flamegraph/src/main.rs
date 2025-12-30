@@ -66,7 +66,7 @@ async fn run() {
         .unwrap();
     let server_hook_clone: ServerControlHook = server_hook.clone();
     tokio::spawn(async move {
-        tokio::time::sleep(std::time::Duration::from_secs(60)).await;
+        tokio::time::sleep(std::time::Duration::from_secs(10)).await;
         server_hook.shutdown().await;
     });
     server_hook_clone.wait().await;
