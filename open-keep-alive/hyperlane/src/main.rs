@@ -4,7 +4,7 @@ use tokio::runtime::{Builder, Runtime};
 pub const BODY: &[u8] = b"Hello";
 
 struct RootRoute;
-struct PanicHook;
+struct TaskPanicHook;
 
 fn runtime() -> Runtime {
     Builder::new_multi_thread()
@@ -17,7 +17,7 @@ fn runtime() -> Runtime {
         .unwrap()
 }
 
-impl ServerHook for PanicHook {
+impl ServerHook for TaskPanicHook {
     async fn new(_ctx: &Context) -> Self {
         Self
     }
@@ -57,7 +57,7 @@ async fn run() {
     config.port(60000).await.disable_nodelay().await;
     Server::from(config)
         .await
-        .panic_hook::<PanicHook>()
+        .task_panic::<TaskPanicHook>()
         .await
         .route::<RootRoute>("/")
         .await

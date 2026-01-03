@@ -1,6 +1,6 @@
 const { Worker, isMainThread } = require('worker_threads');
 const http = require('http');
-const THREAD_COUNT = 128;
+const THREAD_COUNT = 64;
 const URL = 'http://127.0.0.1:60000/';
 
 function sendRequest() {

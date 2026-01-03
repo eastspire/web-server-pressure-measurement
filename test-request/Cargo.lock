@@ -415,9 +415,9 @@ dependencies = [
 
 [[package]]
 name = "http-compress"
-version = "3.0.6"
+version = "3.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e981abf4edff64424f5657082bf163bda23100b25a379b0a519b96f02fd8ccb"
+checksum = "a4e1410ba55802d2791d75bac714700e38b21b97377dc11a02b261e96339428c"
 dependencies = [
  "brotli",
  "flate2",
@@ -426,15 +426,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.83.0"
+version = "1.83.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c894fa5134967b007f4eb7d1204240ab3ba52707ef98ccdb49f5adc37076499f"
+checksum = "8b3b8be124d9169d8670598a31b575969b2830c93957cecfb1d75250d138680f"
 
 [[package]]
 name = "http-request"
-version = "8.91.65"
+version = "8.91.67"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "afb4abd25b01c7342c0059738d180190fc8baf1ded564a7780281519c73005ea"
+checksum = "f8c408bcf999fcd758db3148c3f297f1282f445bf12698b71891d4967d4a7bf8"
 dependencies = [
  "futures",
  "http-type",
@@ -449,9 +449,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "5.30.1"
+version = "5.31.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee45bdeebd66330e42df03d5a9d2adbd915612a2948ac87549573711465177ea"
+checksum = "4518a40a467e42c8ff2eab000ef8fa7bd3f7fc47e3e48f6e6453984fcadc4253"
 dependencies = [
  "hex",
  "http-compress",
@@ -667,9 +667,9 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "lombok-macros"
-version = "1.13.19"
+version = "1.13.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c13a953bf01bc24da932ef6d1be7a27a3c42c36d2b18050f9051656369b4d317"
+checksum = "8ec6a4dfebf3f48af7a3a7b808b15c80b91fc0f3815065866837aca002d25cb3"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1282,9 +1282,9 @@ dependencies = [
 
 [[package]]
 name = "webpki-roots"
-version = "1.0.4"
+version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b2878ef029c47c6e8cf779119f20fcf52bde7ad42a731b2a304bc221df17571e"
+checksum = "12bed680863276c63889429bfd6cab3b99943659923822de1c8a39c49e4d722c"
 dependencies = [
  "rustls-pki-types",
 ]
@@ -1574,6 +1574,6 @@ dependencies = [
 
 [[package]]
 name = "zmij"
-version = "1.0.7"
+version = "1.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de9211a9f64b825911bdf0240f58b7a8dac217fe260fc61f080a07f61372fbd5"
+checksum = "317f17ff091ac4515f17cc7a190d2769a8c9a96d227de5d64b500b01cda8f2cd"
