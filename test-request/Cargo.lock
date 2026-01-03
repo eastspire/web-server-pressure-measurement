@@ -432,9 +432,9 @@ checksum = "c894fa5134967b007f4eb7d1204240ab3ba52707ef98ccdb49f5adc37076499f"
 
 [[package]]
 name = "http-request"
-version = "8.91.63"
+version = "8.91.65"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "daccbabb872fbf728e88584c2b8bc15f175aff1ee4e28b7ba6826776991fb94f"
+checksum = "afb4abd25b01c7342c0059738d180190fc8baf1ded564a7780281519c73005ea"
 dependencies = [
  "futures",
  "http-type",
@@ -1574,6 +1574,6 @@ dependencies = [
 
 [[package]]
 name = "zmij"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aac060176f7020d62c3bcc1cdbcec619d54f48b07ad1963a3f80ce7a0c17755f"
+checksum = "de9211a9f64b825911bdf0240f58b7a8dac217fe260fc61f080a07f61372fbd5"

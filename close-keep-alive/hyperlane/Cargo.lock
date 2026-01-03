@@ -175,9 +175,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "10.24.6"
+version = "10.25.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe1bfb1db2e76a9bd2d1fa459220787c505164ae51c0865d8db4a3a16f325731"
+checksum = "133c225e583113dc0afd03cb9f8c5470584117b63b9c40d596f2b6e3f28c4575"
 dependencies = [
  "http-type",
  "inventory",
@@ -976,6 +976,6 @@ dependencies = [
 
 [[package]]
 name = "zmij"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aac060176f7020d62c3bcc1cdbcec619d54f48b07ad1963a3f80ce7a0c17755f"
+checksum = "de9211a9f64b825911bdf0240f58b7a8dac217fe260fc61f080a07f61372fbd5"
