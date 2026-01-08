@@ -31,6 +31,7 @@ impl ServerHook for RootRoute {
     }
 
     async fn handle(self, ctx: &Context) {
+        let cfg: RequestConfig = RequestConfig::default();
         let send = || async {
             let _ = ctx.send().await;
             let _ = ctx.flush().await;
@@ -45,7 +46,7 @@ impl ServerHook for RootRoute {
             .set_response_body(BODY)
             .await;
         send().await;
-        while let Ok(_) = ctx.http_from_stream(RequestConfig::default()).await {
+        while let Ok(_) = ctx.http_from_stream(cfg).await {
             send().await;
         }
         let _ = ctx.closed().await;
