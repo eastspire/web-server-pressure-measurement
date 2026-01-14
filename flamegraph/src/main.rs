@@ -1,21 +1,9 @@
 use hyperlane::*;
-use tokio::runtime::{Builder, Runtime};
 
 pub const BODY: &[u8] = b"Hello";
 
 struct RootRoute;
 struct TaskPanicHook;
-
-fn runtime() -> Runtime {
-    Builder::new_multi_thread()
-        .worker_threads(8)
-        .thread_stack_size(1024)
-        .max_blocking_threads(5120)
-        .max_io_events_per_tick(5120)
-        .enable_all()
-        .build()
-        .unwrap()
-}
 
 impl ServerHook for TaskPanicHook {
     async fn new(_ctx: &Context) -> Self {
@@ -53,7 +41,8 @@ impl ServerHook for RootRoute {
     }
 }
 
-async fn run() {
+#[tokio::main]
+async fn main() {
     let mut request_config: RequestConfig = RequestConfig::default();
     request_config
         .set_buffer_size(KB_4)
@@ -87,8 +76,4 @@ async fn run() {
         server_hook.shutdown().await;
     });
     server_hook_clone.wait().await;
-}
-
-fn main() {
-    runtime().block_on(run());
 }

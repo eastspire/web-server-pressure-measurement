@@ -23,3 +23,5 @@ panic = "unwind"
 debug = false
 codegen-units = 1
 strip = "debuginfo"
+overflow-checks = false
+rpath = false
