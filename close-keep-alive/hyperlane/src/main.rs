@@ -37,25 +37,41 @@ impl ServerHook for RootRoute {
 
 #[tokio::main]
 async fn main() {
-    let mut request_config: RequestConfig = RequestConfig::default();
+    let request_config: RequestConfig = RequestConfig::new().await;
     request_config
-        .set_buffer_size(KB_4)
-        .set_http_read_timeout_ms(u64::MAX)
-        .set_max_body_size(usize::MAX)
-        .set_max_header_count(usize::MAX)
-        .set_max_header_key_length(usize::MAX)
-        .set_max_header_line_length(usize::MAX)
-        .set_max_header_value_length(usize::MAX)
-        .set_max_path_length(usize::MAX)
-        .set_max_query_length(usize::MAX)
-        .set_max_request_line_length(usize::MAX)
-        .set_max_ws_frame_size(usize::MAX)
-        .set_max_ws_frames(usize::MAX)
-        .set_ws_read_timeout_ms(u64::MAX);
-    let config: ServerConfig = ServerConfig::new().await;
-    config.request_config(request_config).await;
-    config.port(60000).await.disable_nodelay().await;
-    Server::from(config)
+        .buffer_size(KB_4)
+        .await
+        .http_read_timeout_ms(u64::MAX)
+        .await
+        .max_body_size(usize::MAX)
+        .await
+        .max_header_count(usize::MAX)
+        .await
+        .max_header_key_length(usize::MAX)
+        .await
+        .max_header_line_length(usize::MAX)
+        .await
+        .max_header_value_length(usize::MAX)
+        .await
+        .max_path_length(usize::MAX)
+        .await
+        .max_query_length(usize::MAX)
+        .await
+        .max_request_line_length(usize::MAX)
+        .await
+        .max_ws_frame_size(usize::MAX)
+        .await
+        .max_ws_frames(usize::MAX)
+        .await
+        .ws_read_timeout_ms(u64::MAX)
+        .await;
+    let server_config: ServerConfig = ServerConfig::new().await;
+    server_config.port(60000).await.disable_nodelay().await;
+    Server::new()
+        .await
+        .server_config(server_config)
+        .await
+        .request_config(request_config)
         .await
         .task_panic::<TaskPanicHook>()
         .await

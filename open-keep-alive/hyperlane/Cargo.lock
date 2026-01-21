@@ -140,9 +140,9 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "http-compress"
-version = "3.0.8"
+version = "3.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77a66d5d4768248172b961c2f64fb779976261751c99fb2b09df68fe0b56f830"
+checksum = "55694f51ed1576ad367196125a7df33cdb5f049bf3ee3b5775373712c2965dff"
 dependencies = [
  "brotli",
  "flate2",
@@ -151,15 +151,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.83.2"
+version = "1.83.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b72ec39b967834331334b3f27021b1dc1b0f042a219e368f1fd5cae518ae43ab"
+checksum = "9e9a76d304d9f43dcc1a90a1243d4452f9e57b95c114aaa8e0b97295920452be"
 
 [[package]]
 name = "http-type"
-version = "6.0.4"
+version = "8.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a25a370fb3cc9d4cde83de94b557d75ef0bb377b2cd6f0475bff0311d859102"
+checksum = "cbaf3f1de9c0d47f088ddf3690d5e28090a3ede8f64ed48d250f208a4e88a8f9"
 dependencies = [
  "hex",
  "http-compress",
@@ -175,9 +175,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "10.35.3"
+version = "11.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5352f9e031fcd96171e6752eabed30ef26d1b0522eaa58ac2c8af3bb5bc9c54e"
+checksum = "1cb44e72df71ad3919b6405ba345b7b42ecea355fe298cccd4c7d436c3382a9b"
 dependencies = [
  "http-type",
  "inventory",
@@ -339,9 +339,9 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "lombok-macros"
-version = "2.0.13"
+version = "2.0.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab870ca6bf78e855eeb4ae1bb4cc99f1e267d49f65ffe62c30360e05271a217f"
+checksum = "f9db2b74d0fc4c57d776356329f7091816f68f86403b09d0f91198802c6f27de"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -666,18 +666,18 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "2.0.17"
+version = "2.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f63587ca0f12b72a0600bcba1d40081f830876000bb46dd2337a3051618f4fc8"
+checksum = "4288b5bcbc7920c07a1149a35cf9590a2aa808e0bc1eafaade0b80947865fbc4"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "2.0.17"
+version = "2.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ff15c8ecd7de3849db632e14d18d2571fa09dfc5ed93479bc4485c7a517c913"
+checksum = "ebc4ee7f67670e9b64d05fa4253e753e016c6c95ff35b89b7941d6b856dec1d5"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -976,6 +976,6 @@ dependencies = [
 
 [[package]]
 name = "zmij"
-version = "1.0.15"
+version = "1.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "94f63c051f4fe3c1509da62131a678643c5b6fbdc9273b2b79d4378ebda003d2"
+checksum = "dfcd145825aace48cff44a8844de64bf75feec3080e0aa5cdbde72961ae51a65"
