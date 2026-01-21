@@ -404,9 +404,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "8.2.4"
+version = "8.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cbaf3f1de9c0d47f088ddf3690d5e28090a3ede8f64ed48d250f208a4e88a8f9"
+checksum = "5556cf762bd811e1d905391793e3ca30ad7d4b933d4cb4d6c61a3dd0cc426ad1"
 dependencies = [
  "hex",
  "http-compress",
