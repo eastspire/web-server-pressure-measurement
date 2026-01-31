@@ -67,9 +67,9 @@ checksum = "b35204fbdc0b3f4446b89fc1ac2cf84a8a68971995d0bf2e925ec7cd960f9cb3"
 
 [[package]]
 name = "cc"
-version = "1.2.54"
+version = "1.2.55"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6354c81bbfd62d9cfa9cb3c773c2b7b2a3a482d569de977fd0e961f6e7c00583"
+checksum = "47b26a0954ae34af09b50f0de26458fa95369a0d478d8236d3f93082b219bd29"
 dependencies = [
  "find-msvc-tools",
  "shlex",
@@ -154,9 +154,9 @@ dependencies = [
 
 [[package]]
 name = "find-msvc-tools"
-version = "0.1.8"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8591b0bcc8a98a64310a2fae1bb3e9b8564dd10e381e6e28010fde8e8e8568db"
+checksum = "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
 
 [[package]]
 name = "flate2"
@@ -381,15 +381,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "1.83.6"
+version = "3.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39330526ba0a5bdf179e7c0426774e6e1773fde621c46b32f7b680b8a1f467c6"
+checksum = "7fe8ec3500f051b3d7120b3e349daeb13fd1c0bfd44ca4a5549beee6c3d178a9"
 
 [[package]]
 name = "http-request"
-version = "8.91.85"
+version = "8.91.92"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "156f797baacfd101e75b1a2d036c8896cb5202b73d7eb29e61d84000ab9089d8"
+checksum = "53dee060877ad92c9f2bbd193a2657d27fda4377ea9e59ef0622a16738da57da"
 dependencies = [
  "futures",
  "http-type",
@@ -404,9 +404,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "8.2.7"
+version = "14.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c95b8932c1d5d941760efb829cc76aaf808050683b931044ec11f825fe76f0e"
+checksum = "d9c27084b9427a9625bbc52fbad291b1c038b62da450ebde2e3bb3a801902ea1"
 dependencies = [
  "hex",
  "http-compress",
@@ -1437,18 +1437,18 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
-version = "0.8.33"
+version = "0.8.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "668f5168d10b9ee831de31933dc111a459c97ec93225beb307aed970d1372dfd"
+checksum = "7456cf00f0685ad319c5b1693f291a650eaf345e941d082fc4e03df8a03996ac"
 dependencies = [
  "zerocopy-derive",
 ]
 
 [[package]]
 name = "zerocopy-derive"
-version = "0.8.33"
+version = "0.8.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c7962b26b0a8685668b671ee4b54d007a67d4eaf05fda79ac0ecf41e32270f1"
+checksum = "1328722bbf2115db7e19d69ebcc15e795719e2d66b60827c6a69a117365e37a0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1517,6 +1517,6 @@ dependencies = [
 
 [[package]]
 name = "zmij"
-version = "1.0.16"
+version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dfcd145825aace48cff44a8844de64bf75feec3080e0aa5cdbde72961ae51a65"
+checksum = "1966f8ac2c1f76987d69a74d0e0f929241c10e78136434e3be70ff7f58f64214"
