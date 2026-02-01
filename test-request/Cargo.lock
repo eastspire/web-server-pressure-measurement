@@ -387,9 +387,9 @@ checksum = "7250f9e702aae339609429a90eeb242d18aa58a746c2c8f7defe2e74eb515afa"
 
 [[package]]
 name = "http-request"
-version = "8.91.94"
+version = "8.91.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "081af0d88a2544217b4aee7729f1da6d549ecb0ca43ed70de74a556792138378"
+checksum = "0bda80d8d863a6c7402c3dc3eaef6fe1224fc0fbc2f68bf21e442a6d82899005"
 dependencies = [
  "futures",
  "http-type",
@@ -404,9 +404,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "14.3.3"
+version = "14.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d1b22447f421ac195f1cbb8335419abbf90bb4a77fcb7f5fd6e11e9b2211c4a0"
+checksum = "d92f6e21d2de04d6ee2b2a55cd907be6495904428d01064c6e3703695ecfc9fb"
 dependencies = [
  "hex",
  "http-compress",
