@@ -1,21 +1,25 @@
 #!/bin/bash
 cd ./open-keep-alive/hyperlane;
 rm -rf Cargo.lock;
+cargo clean;
 cargo fmt;
 cargo clippy --fix --workspace --all-targets --allow-dirty;
 cargo check;
 cd ../../close-keep-alive/hyperlane;
 rm -rf Cargo.lock;
+cargo clean;
 cargo fmt;
 cargo clippy --fix --workspace --all-targets --allow-dirty;
 cargo check;
 cd ../../test-request;
 rm -rf Cargo.lock;
+cargo clean;
 cargo fmt;
 cargo clippy --fix --workspace --all-targets --allow-dirty;
 cargo check;
 cd ../../flamegraph;
 rm -rf Cargo.lock;
+cargo clean;
 cargo fmt;
 cargo clippy --fix --workspace --all-targets --allow-dirty;
 cargo check;
