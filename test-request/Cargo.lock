@@ -386,9 +386,9 @@ checksum = "9f75d8a2ee1bf28157264f78253acddae13c1da9357237aeaab6659c01639fb2"
 
 [[package]]
 name = "http-request"
-version = "8.91.103"
+version = "8.91.104"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3ccf44be12021215e3aca06979ad0f82f6c6a50a3504fc23b27fd1dcbf459de"
+checksum = "7b1fdf9c42d52225315b3312bbf08671b8575b1c4d9ff23f7150854d070f9212"
 dependencies = [
  "futures",
  "http-type",
@@ -403,9 +403,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "17.0.0"
+version = "17.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ba7a48926d8bcb016059c4cc4f24b85c38523f7c1e78b5ff8dd6518d239bd53"
+checksum = "af6ba38598ad29f27dec61b0600308ddc895c4ce4478b907107313bbfedddeb2"
 dependencies = [
  "hex",
  "http-compress",
@@ -611,9 +611,9 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "lombok-macros"
-version = "2.0.25"
+version = "2.0.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15b324e15a8b8a18cd2e35d802cb93a1fa2c6e7e13b85aba045e874456a7b856"
+checksum = "f09bf143bf5aaf7874fd905e5fe438426ed9ef57ef6777ddc4af1b300980b44f"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -784,9 +784,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.23.36"
+version = "0.23.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c665f33d38cea657d9614f766881e4d510e0eda4239891eea56b4cadcf01801b"
+checksum = "758025cb5fccfd3bc2fd74708fd4682be41d99e5dff73c377c0646c6012c73a4"
 dependencies = [
  "once_cell",
  "ring",
@@ -1430,18 +1430,18 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
-version = "0.8.39"
+version = "0.8.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "db6d35d663eadb6c932438e763b262fe1a70987f9ae936e60158176d710cae4a"
+checksum = "a789c6e490b576db9f7e6b6d661bcc9799f7c0ac8352f56ea20193b2681532e5"
 dependencies = [
  "zerocopy-derive",
 ]
 
 [[package]]
 name = "zerocopy-derive"
-version = "0.8.39"
+version = "0.8.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4122cd3169e94605190e77839c9a40d40ed048d305bfdc146e7df40ab0f3e517"
+checksum = "f65c489a7071a749c849713807783f70672b28094011623e200cb86dcb835953"
 dependencies = [
  "proc-macro2",
  "quote",

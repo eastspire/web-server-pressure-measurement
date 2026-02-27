@@ -17,7 +17,7 @@ cargo clean;
 cargo fmt;
 cargo clippy --fix --workspace --all-targets --allow-dirty;
 cargo check;
-cd ../../flamegraph;
+cd ../flamegraph;
 rm -rf Cargo.lock;
 cargo clean;
 cargo fmt;
