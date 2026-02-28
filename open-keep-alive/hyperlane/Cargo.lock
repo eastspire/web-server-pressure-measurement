@@ -175,9 +175,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "17.3.7"
+version = "18.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8d86a82c6090b2c759397db4fa31349afdc6e4394c5521deabc6923ab6481a2"
+checksum = "46a988cc4ed6a8dfd48f446f23301fc73fe7672779ecebc6d355e397a774dd7f"
 dependencies = [
  "http-type",
  "inventory",
@@ -406,9 +406,9 @@ checksum = "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220"
 
 [[package]]
 name = "pin-project-lite"
-version = "0.2.16"
+version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3b3cff922bd51709b605d9ead9aa71031d81447142d828eb4a6eba76fe619f9b"
+checksum = "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
 
 [[package]]
 name = "potential_utf"
