@@ -369,9 +369,9 @@ dependencies = [
 
 [[package]]
 name = "http-compress"
-version = "3.0.17"
+version = "3.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fcc52cc56a1bcff8cd523dcf2fb6a6e11bd982444ae774811739ce1cdba7b18c"
+checksum = "1ab7df1584b69f0865e6a1fa8cca139504f5fc90306856e198c384c5bd449bf8"
 dependencies = [
  "brotli",
  "flate2",
@@ -380,15 +380,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "5.1.0"
+version = "5.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37bf76b61a81b22c76f08f1a48904b5d30e9dc149fe0658d6c672ef345eeafb5"
+checksum = "7ec2708886ccbffc115c6b8510f47de38490a746309e0342255e0abe1eef665d"
 
 [[package]]
 name = "http-request"
-version = "8.91.105"
+version = "8.91.107"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "899e28a7a49d6cc50270e16ecad9660ce19432c31c3898b0d4c65d04a9520e29"
+checksum = "dffb153982822ef6e4a3b0fc14960ad1f26334634b475903db5e979b6741c849"
 dependencies = [
  "futures",
  "http-type",
@@ -403,9 +403,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "17.1.0"
+version = "17.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb8cf4620daa15a0863d4373ce8589c41f3ddeb0d761f85691a06c275a8be1c1"
+checksum = "88e85acaf47d5d64c88f2002d9fb3c399f1eea55361ae323d5fef4af26dc1f78"
 dependencies = [
  "hex",
  "http-compress",
@@ -611,9 +611,9 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "lombok-macros"
-version = "2.0.26"
+version = "2.0.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f09bf143bf5aaf7874fd905e5fe438426ed9ef57ef6777ddc4af1b300980b44f"
+checksum = "febe7caec48f1d3af70c10f5895206873707ef8f957aa8b8dc9e70a1c539421a"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -717,9 +717,9 @@ dependencies = [
 
 [[package]]
 name = "quote"
-version = "1.0.44"
+version = "1.0.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21b2ebcf727b7760c461f091f9f0f539b77b8e87f2fd88131e7f1b433b3cece4"
+checksum = "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924"
 dependencies = [
  "proc-macro2",
 ]
@@ -1026,9 +1026,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.49.0"
+version = "1.50.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72a2903cd7736441aac9df9d7688bd0ce48edccaadf181c3b90be801e81d3d86"
+checksum = "27ad5e34374e03cfffefc301becb44e9dc3c17584f414349ebe29ed26661822d"
 dependencies = [
  "bytes",
  "libc",
@@ -1043,9 +1043,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-macros"
-version = "2.6.0"
+version = "2.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "af407857209536a95c8e56f8231ef2c2e2aff839b22e07a1ffcbc617e9db9fa5"
+checksum = "5c55a2eff8b69ce66c84f85e1da1c233edc36ceb85a2058d11b0d6a3c7e7569c"
 dependencies = [
  "proc-macro2",
  "quote",
