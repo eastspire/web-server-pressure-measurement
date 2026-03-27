@@ -175,9 +175,9 @@ dependencies = [
 
 [[package]]
 name = "hyperlane"
-version = "18.3.1"
+version = "18.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c267799935b4ed54925c729a75bd5f44e647de7339f5f8eda7278f2efe43067"
+checksum = "18ebb3ad2c8e45b9bb20de62ff4639a82908eca33b883a9c8d9051a7a9f70cb7"
 dependencies = [
  "http-type",
  "inventory",
@@ -616,9 +616,9 @@ dependencies = [
 
 [[package]]
 name = "simd-adler32"
-version = "0.3.8"
+version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e320a6c5ad31d271ad523dcf3ad13e2767ad8b1cb8f047f75a8aeaf8da139da2"
+checksum = "703d5c7ef118737c72f1af64ad2f6f8c5e1921f818cdcb97b8fe6fc69bf66214"
 
 [[package]]
 name = "smallvec"
