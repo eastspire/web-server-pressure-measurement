@@ -51,10 +51,12 @@ impl ServerHook for RootRoute {
 async fn main() {
     let mut server: Server = Server::default();
     let mut server_config: ServerConfig = ServerConfig::default();
+    let request_config: RequestConfig = RequestConfig::low_security();
     server_config
         .set_address(Server::format_bind_address(DEFAULT_HOST, 60000))
         .set_nodelay(Some(false));
     server.server_config(server_config);
+    server.request_config(request_config);
     server.task_panic::<TaskPanicHook>();
     server.route::<RootRoute>("/");
     let server_control_hook: ServerControlHook = server.run().await.unwrap_or_default();
