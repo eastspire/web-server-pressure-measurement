@@ -50,7 +50,7 @@ impl ServerHook for RootRoute {
 #[tokio::main]
 async fn main() {
     let mut server: Server = Server::default();
-    let mut server_config: ServerConfig = ServerConfig::default(); 
+    let mut server_config: ServerConfig = ServerConfig::default();
     let request_config: RequestConfig = RequestConfig::low_security();
     server_config
         .set_address(Server::format_bind_address(DEFAULT_HOST, 60000))

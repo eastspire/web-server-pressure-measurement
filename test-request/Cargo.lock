@@ -380,15 +380,15 @@ dependencies = [
 
 [[package]]
 name = "http-constant"
-version = "5.6.8"
+version = "5.6.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0251e3fe5c525996216a7510af2ee9b712fc7be8a6bc502987c5d92d94f66972"
+checksum = "8fb7184d063e426b077be1e9dd69227b744d45a049d9402ae6b8d893c625b831"
 
 [[package]]
 name = "http-request"
-version = "8.91.123"
+version = "8.91.124"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "31bc971182a6aeb102a30265bf9cb99510731b651a4b41565155cc733ef7499c"
+checksum = "f81c8680e234a699fb2b5bc809a4d759ce175d3c3b3b84d6aa4845b59d94ed6f"
 dependencies = [
  "futures",
  "http-type",
@@ -403,9 +403,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "20.1.4"
+version = "20.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f342a77f48b8be737b8b7e70999a69b18a4d0e231792cc6a25302f0f439206c6"
+checksum = "185c441736c33d2b745da3becc1085f48c352b00fc0587dae513b7697ee34b5f"
 dependencies = [
  "hex",
  "http-compress",
