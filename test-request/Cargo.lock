@@ -169,7 +169,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -418,9 +418,9 @@ checksum = "5993a9289ff42dd070a9f80f27e5861928601b203288adef0b71f43248edf0f7"
 
 [[package]]
 name = "http-request"
-version = "8.91.124"
+version = "8.91.125"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f81c8680e234a699fb2b5bc809a4d759ce175d3c3b3b84d6aa4845b59d94ed6f"
+checksum = "f0b273d59e3850f1006915f16742b9134d643a25655e58c52e1751170a35bf59"
 dependencies = [
  "futures",
  "http-type",
@@ -435,9 +435,9 @@ dependencies = [
 
 [[package]]
 name = "http-type"
-version = "20.1.5"
+version = "20.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "185c441736c33d2b745da3becc1085f48c352b00fc0587dae513b7697ee34b5f"
+checksum = "c24ef375b7458eaa2f72c8589654c02a48c029c8bfc7878ea517e0041235516d"
 dependencies = [
  "hex",
  "http-compress",
